@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMobi - Painel Administrativo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-admin">A</div>
+                <h2>AutoMobi Admin</h2>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#dashboard" class="nav-link active" data-page="dashboard">📊 Dashboard</a></li>
+                <li><a href="#anuncios" class="nav-link" data-page="anuncios">📢 Anúncios</a></li>
+                <li><a href="#usuarios" class="nav-link" data-page="usuarios">👥 Usuários</a></li>
+                <li><a href="#pagamentos" class="nav-link" data-page="pagamentos">💳 Pagamentos</a></li>
+                <li><a href="#relatorios" class="nav-link" data-page="relatorios">📈 Relatórios</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Painel Administrativo</h1>
+                <div class="admin-user">
+                    <span>Admin</span>
+                    <button class="logout-btn">Sair</button>
+                </div>
+            </header>
+
+            <!-- DASHBOARD -->
+            <section id="dashboard" class="page active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total de Anúncios</h3>
+                        <p class="stat-number" id="total-anuncios">0</p>
+                        <span class="stat-label">Publicados</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Anúncios Pendentes</h3>
+                        <p class="stat-number" id="anuncios-pendentes">0</p>
+                        <span class="stat-label">Aguardando Pagamento</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Receita Total</h3>
+                        <p class="stat-number" id="receita-total">R$ 0</p>
+                        <span class="stat-label">Últimos 30 dias</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Usuários Ativos</h3>
+                        <p class="stat-number" id="usuarios-ativos">0</p>
+                        <span class="stat-label">Vendedores</span>
+                    </div>
+                </div>
+
+                <div class="recent-section">
+                    <h2>Anúncios Recentes Pendentes</h2>
+                    <div class="anuncios-list" id="anuncios-pendentes-list">
+                        <p class="empty-state">Nenhum anúncio pendente</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANÚNCIOS -->
+            <section id="anuncios" class="page">
+                <div class="page-header">
+                    <h2>Gerenciar Anúncios</h2>
+                    <input type="text" id="search-anuncios" class="search-input" placeholder="Buscar anúncio...">
+                </div>
+                <div class="anuncios-admin-list" id="anuncios-admin-list">
+                    <p class="empty-state">Nenhum anúncio cadastrado</p>
+                </div>
+            </section>
+
+            <!-- USUÁRIOS -->
+            <section id="usuarios" class="page">
+                <div class="page-header">
+                    <h2>Gerenciar Usuários</h2>
+                    <input type="text" id="search-usuarios" class="search-input" placeholder="Buscar usuário...">
+                </div>
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>WhatsApp</th>
+                            <th>Anúncios</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usuarios-list">
+                        <tr><td colspan="5" class="empty-state">Nenhum usuário</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- PAGAMENTOS -->
+            <section id="pagamentos" class="page">
+                <div class="page-header">
+                    <h2>Gerenciar Pagamentos</h2>
+                </div>
+                <table class="payments-table">
+                    <thead>
+                        <tr>
+                            <th>ID PIX</th>
+                            <th>Vendedor</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pagamentos-list">
+                        <tr><td colspan="6" class="empty-state">Nenhum pagamento</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- RELATÓRIOS -->
+            <section id="relatorios" class="page">
+                <h2>Relatórios</h2>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>Relatório de Receita</h3>
+                        <p>Gerar relatório de receitas dos últimos 30 dias</p>
+                        <button class="btn-primary">Gerar PDF</button>
+                    </div>
+                    <div class="report-card">
+                        <h3>Relatório de Usuários</h3>
+                        <p>Lista completa de usuários cadastrados</p>
+                        <button class="btn-primary">Gerar PDF</button>
+                    </div>
+                    <div class="report-card">
+                        <h3>Relatório de Anúncios</h3>
+                        <p>Estatísticas de anúncios publicados</p>
+                        <button class="btn-primary">Gerar PDF</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para Confirmar Pagamento -->
+    <div id="modal-confirmar-pagamento" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Confirmar Recebimento do Pagamento</h2>
+            <div class="modal-body">
+                <p><strong>Vendedor:</strong> <span id="modal-vendedor"></span></p>
+                <p><strong>Valor:</strong> R$ <span id="modal-valor"></span></p>
+                <p><strong>ID PIX:</strong> <span id="modal-pix-id"></span></p>
+                <div id="modal-qrcode"></div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
+                <button class="btn-success" onclick="confirmarPagamento()">Confirmar Recebimento</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode.js/1.5.3/qrcode.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
