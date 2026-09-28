@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoMobi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">A</div>
+          <div>
+            <p class="eyebrow">Bem-vindo</p>
+            <h1>AutoMobi</h1>
+          </div>
+        </div>
+        <button class="icon-button" aria-label="Notificações">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6.5V11a7 7 0 1 0-14 0v4.5L3 18v1h18v-1l-2-2.5Z"/>
+          </svg>
+        </button>
+      </header>
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="label">Oferta exclusiva</p>
+          <h2>BMW M4 2024</h2>
+          <div class="price-row">
+            <span class="price">R$ 389.900</span>
+            <span class="badge">12% off</span>
+          </div>
+        </div>
+        <div class="hero-figure">
+          <div class="car-glow"></div>
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80" alt="BMW M4" />
+        </div>
+      </section>
+
+      <section class="location-row">
+        <div class="location-pill">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s7-6.6 7-12a7 7 0 1 0-14 0c0 5.4 7 12 7 12Zm0-9.5a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5Z"/>
+          </svg>
+          São Paulo, SP
+        </div>
+        <button class="filter-button">Filtros</button>
+      </section>
+
+      <nav class="category-bar" aria-label="Categorias">
+        <button class="chip active">Todos</button>
+        <button class="chip">SUV</button>
+        <button class="chip">Esportivo</button>
+        <button class="chip">Elétrico</button>
+      </nav>
+
+      <section class="section-header">
+        <h3>Mais procurados</h3>
+        <a href="#">Ver tudo</a>
+      </section>
+
+      <section class="cars-grid">
+        <article class="car-card highlight">
+          <div class="car-card__image">
+            <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80" alt="Mercedes AMG" />
+            <button class="favorite" aria-label="Favoritar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m12 21-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.05 6.05 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.18L12 21Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="car-card__content">
+            <div class="car-title-row">
+              <h4>Mercedes AMG</h4>
+              <span>2023</span>
+            </div>
+            <p>V8 Twin Turbo • 0 a 100 em 3.8s</p>
+            <div class="car-meta">
+              <span>Automatic</span>
+              <span>3.0L</span>
+            </div>
+            <div class="car-footer">
+              <strong>R$ 449.000</strong>
+              <button>Comprar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card small">
+          <div class="car-card__image">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Audi RS5" />
+            <button class="favorite" aria-label="Favoritar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m12 21-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 0 1 6.5 4c1.74 0 3.41.81 4.5 2.09A6.05 6.05 0 0 1 15.5 4 4.5 4.5 0 0 1 20 8.5c0 3.78-3.4 6.86-8.55 11.18L12 21Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="car-card__content">
+            <div class="car-title-row">
+              <h4>Audi RS5</h4>
+              <span>2022</span>
+            </div>
+            <p>Quattro • 3.0T</p>
+            <div class="car-footer compact">
+              <strong>R$ 331.000</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mini-banner">
+        <div>
+          <p class="mini-label">Financeiro</p>
+          <h3>Seu carro com entrada de 20%.</h3>
+        </div>
+        <button>Simular</button>
+      </section>
+
+      <nav class="bottom-nav" aria-label="Navegação principal">
+        <button class="nav-item active">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v9h6v-6h2v6h6v-9h3L12 3Z"/></svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.35-9.5-8.29A5.73 5.73 0 0 1 12 4.9a5.73 5.73 0 0 1 9.5 7.81C19.5 16.65 12 21 12 21Z"/></svg>
+          <span>Favoritos</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8A2.5 2.5 0 0 1 17.5 16H9l-5 5v-15.5Zm4.5 2h7v2h-7v-2Zm0 4h9v2h-9v-2Z"/></svg>
+          <span>Mensagens</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"/></svg>
+          <span>Perfil</span>
+        </button>
+      </nav>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
